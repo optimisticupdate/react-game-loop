@@ -37,6 +37,7 @@ const useGameLoop = ({ gameStatus }: GameOptions, callback: AnimationFrameCallba
         callback({ fps: 0, deltaTime: undefined })
         cancelAnimationFrame(animationFrameRef.current!)
         animationFrameRef.current = undefined
+        timeRef.current = undefined
         break
     }
 

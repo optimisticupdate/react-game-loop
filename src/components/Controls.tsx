@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { GameStatus } from '../interfaces/gameState'
-import { updateGameStatus } from '../store'
+import { toggleFps, updateGameStatus } from '../store'
 
 const Controls: FC = () => {
   return (
@@ -10,6 +10,9 @@ const Controls: FC = () => {
       </button>
       <button className="border-2 p-1" onClick={() => updateGameStatus(GameStatus.notstarted)}>
         Stop Game
+      </button>
+      <button className="border-2 p-1" onClick={() => toggleFps()}>
+        Toggle FPS
       </button>
     </div>
   )
